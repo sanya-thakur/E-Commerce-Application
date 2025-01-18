@@ -1,9 +1,4 @@
-const multer = require('multer');
-
-
-
-
-// Configure multer storage
+const multer = require('multer');// Configure multer storage
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, 'uploads/'); // Define your upload folder
@@ -14,8 +9,4 @@ const storage = multer.diskStorage({
        const filename = file.originalname.split(".")[0];
        cb(null,filename + "-" + uniqueSuffix + ".png"); // Define
     },
-  });
- 
-  // Initialize upload object
-exports.upload = multer({ storage: storage });
-
+  });  exports.upload = multer({ storage: storage });
