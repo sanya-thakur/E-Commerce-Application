@@ -272,3 +272,27 @@ In this milestone, we focused on retrieving product data from the backend and dy
 - **Loading States:** Implemented a loading spinner while fetching product data.  
 - **Error Handling:** Displayed meaningful error messages in case of API failure.  
 - **Pagination & Filters:** Considered adding pagination and filtering options for better user experience.  
+
+## Milestone 12: Filtering Products by User Email and Displaying Data  
+
+In this milestone, we focused on filtering products based on the **user's email** and sending only relevant product data to the frontend. Key achievements include:  
+
+### **1. Backend: Creating a Filtered API Endpoint**  
+- Developed a **GET** endpoint (`/api/products/:email`) to return products associated with a specific user email.  
+- Used **Mongoose** to query the database and fetch only the products uploaded by the provided email.  
+- Implemented **error handling** to manage scenarios where no products match the email.  
+
+### **2. Frontend: Fetching Filtered Data from API**  
+- Created a function in React to fetch **only products uploaded by the logged-in user**.  
+- Used **Axios** or **Fetch API** to make requests to the backend with the logged-in user's email.  
+- Managed product data using **useState** and **useEffect** hooks.  
+
+### **3. Displaying Filtered Products Dynamically**  
+- Passed the fetched **filtered** product data to a **ProductCard** component.  
+- Rendered product details such as **name, image, price, and description** dynamically.  
+- Ensured a clean and structured UI using CSS and responsive layout techniques.  
+
+### **4. Future Enhancements & Experimentation:**  
+- **Role-Based Access:** Only allow authorized users (e.g., shop owners or admins) to upload and view specific products.  
+- **Advanced Filtering:** Extend filtering options to include categories, price ranges, and product availability.  
+- **Search Functionality:** Implement a search bar for users to quickly find their uploaded products.  
