@@ -345,3 +345,25 @@ In this milestone, we focused on implementing delete functionality for product d
 - **Soft Delete**: Instead of permanently deleting products, mark them as inactive for possible recovery later.  
 - **Role-Based Permissions**: Allow only authorized users (e.g., admins) to delete products.  
 - **Batch Deletion**: Add functionality to delete multiple products at once. 
+
+## Milestone 16: Product Info Page with Quantity Selection and Add to Cart  
+
+In this milestone, we focused on creating a dedicated **Product Info Page** to display detailed information for each product and allow users to select quantity and add the product to their cart.  
+
+### **Frontend: Product Info Page**  
+- Designed a new **Product Info Page** that shows all relevant product details such as:  
+  - **Product Name**  
+  - **Product Description**  
+  - **Product Price**  
+  - **Product Images**  
+- Added a **quantity selector** that allows users to choose how many units they want to add to their cart.  
+- Implemented an **Add to Cart button** to add the selected product and quantity to the user's cart.  
+
+### **React Router Integration**  
+- Used **React Router** to navigate to the Product Info Page when a product card is clicked on the homepage or product listing page.  
+- Passed the product ID through the URL to fetch and display product details on the new page.  
+
+### **State Management and API Integration**  
+- Fetched product details from the backend using the product ID.  
+- Managed the selected quantity using **React state**.  
+- Implemented a function to handle adding the product to the cart, updating the cart state in the application.  
