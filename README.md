@@ -384,3 +384,22 @@ In this milestone, we focused on creating a dedicated **Product Info Page** to d
 - Managed the selected quantity using **React state**.  
 - Implemented a function to handle adding the product to the cart, updating the cart state in the application.  
 - **Batch Deletion**: Add functionality to delete multiple products at once.
+
+## Milestone 17: Implementing Cart Functionality  
+
+In this milestone, we focused on adding **cart functionality** to the application, allowing users to store selected products in their cart.  
+
+### **Backend: Updating the User Schema**  
+- Modified the **User Schema** to include a `cart` field, which stores an array of selected products.  
+- Each product stored in the cart includes details such as **Product ID, Name, Quantity, and Price**.  
+- Used **Mongoose Schema Validation** to ensure data integrity.  
+
+### **Backend: Creating the Cart API Endpoint**  
+- Developed a **POST** endpoint (`/api/cart/add`) to receive product details from the frontend and store them in the user's cart.  
+- Implemented logic to check if a product already exists in the cart and update the quantity instead of adding duplicates.  
+- Ensured proper **error handling** to manage scenarios such as invalid product IDs or missing user authentication.  
+
+### **Frontend: Adding Products to Cart**  
+- Created a function to send **selected product details** to the backend when the "Add to Cart" button is clicked.  
+- Implemented **state management** to dynamically update the UI when a product is added to the cart.  
+- Displayed a confirmation message to notify users when a product is successfully added.  
