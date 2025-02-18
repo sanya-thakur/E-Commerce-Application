@@ -403,3 +403,17 @@ In this milestone, we focused on adding **cart functionality** to the applicatio
 - Created a function to send **selected product details** to the backend when the "Add to Cart" button is clicked.  
 - Implemented **state management** to dynamically update the UI when a product is added to the cart.  
 - Displayed a confirmation message to notify users when a product is successfully added.  
+
+## Milestone 18: Fetching Cart Data  
+
+In this milestone, we implemented functionality to **retrieve cart data** for a logged-in user, allowing them to view the products they have added to their cart.  
+
+### **Backend: Creating an Endpoint to Fetch Cart Data**  
+- Developed a **GET** endpoint (`/api/cart`) to retrieve the cart contents for the authenticated user.  
+- Queried the database using **Mongoose** to fetch only the products stored in the user's cart.  
+- Implemented **error handling** to manage scenarios where the cart is empty or the user is not authenticated.  
+
+### **Frontend: Displaying Cart Data**  
+- Created a function to **fetch cart data** from the backend when the cart page loads.  
+- Used **state management** to dynamically update and display the list of products in the cart.  
+- Displayed important product details such as **name, image, quantity, and price**.
