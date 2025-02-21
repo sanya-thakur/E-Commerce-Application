@@ -439,3 +439,29 @@ By the end of this milestone, you will:
 ### **2. Backend Updates**  
 - Modified **product controller** to handle cart quantity updates.  
 - Ensured proper request handling for increasing and decreasing product quantity. 
+
+## Milestone 20: Implementing the User Profile Page  
+
+### Learning Goals 🎯  
+By the end of this milestone, you will:  
+- Create a **backend endpoint** to send user data to the frontend.  
+- Develop a **Profile Page** to display user details.  
+- Implement an **"Add Address"** button for address management.  
+
+---
+
+### **1. Backend Updates: User Data Endpoint**  
+- Created a **GET** endpoint (`/api/user/profile`) to send user data.  
+- Fetched **name, email, profile photo, and address** from the database.  
+- Ensured proper authentication before sending user details.  
+
+---
+
+### **2. Frontend Updates: Profile Page**  
+- Designed a **Profile Page** to display:  
+  - **Profile Section**: User’s **photo, name, and email**.  
+  - **Address Section**:  
+    - Displayed the **user’s saved address**.  
+    - If no address is found, displayed **"No address found"**.  
+    - Added an **"Add Address"** button for address input.  
+- Styled the page for a **clean and user-friendly UI**.  
