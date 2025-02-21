@@ -417,3 +417,25 @@ In this milestone, we implemented functionality to **retrieve cart data** for a 
 - Created a function to **fetch cart data** from the backend when the cart page loads.  
 - Used **state management** to dynamically update and display the list of products in the cart.  
 - Displayed important product details such as **name, image, quantity, and price**.
+
+## Milestone 19: Implementing the Cart Page with Quantity Controls  
+
+### Learning Goals 🎯  
+By the end of this milestone, you will:  
+- Update the **Cart Page** to display products dynamically.  
+- Implement **increase (+) and decrease (-) buttons** for quantity adjustment.  
+- Modify the backend to support cart updates.  
+
+---
+
+### **1. Frontend Updates**  
+- Added **ProductCart.jsx** to create a reusable cart item component.  
+- Edited **Cart.jsx** to display cart products using the new component.  
+- Implemented **buttons to increase and decrease quantity** for each product.  
+- Improved UI for better user experience.  
+
+---
+
+### **2. Backend Updates**  
+- Modified **product controller** to handle cart quantity updates.  
+- Ensured proper request handling for increasing and decreasing product quantity. 
