@@ -76,26 +76,34 @@ const OrderConfirmation = () => {
 
     const handlePlaceOrder = async () => {
         try {
-            setLoading(true);
-            const response = await axios.post('http://localhost:8000/api/v2/order/place', {
+            // Map cartItems to match the backend expected format
+            const orderItems = cartItems.map(item => ({
+                product: item._id,
+                name: item.name,
+                quantity: item.quantity,
+                price: item.price,
+                image: item.images && item.images.length > 0 ? item.images[0] : '/default-avatar.png'
+            }));
+
+            // Construct payload with email, shippingAddress, and orderItems
+            const payload = {
                 email,
-                addressId,
-            });
+                shippingAddress: selectedAddress,
+                orderItems,
+            };
 
-            if (response.status !== 200 && response.status !== 201) {
-                throw new Error(response.data.message || 'Failed to place order.');
-            }
+            // Send POST request to place orders
+            const response = await axios.post('http://localhost:8000/api/v2/orders/place-order', payload);
+            console.log('Orders placed successfully:', response.data);
 
-            const data = response.data;
-            console.log('Order placed:', data.order);
-            navigate('/order-success', { state: { order: data.order } });
-        } catch (err) {
-            console.error('Error placing order:', err);
-            setError(err.response?.data?.message || err.message || 'An unexpected error occurred while placing the order.');
-        } finally {
-            setLoading(false);
+            // Navigate to an order success page or display a success message
+            navigate('/order-success'); // Adjust route as needed
+        } catch (error) {
+            console.error('Error placing order:', error);
+            // Optionally update error state to display an error message to the user
         }
     };
+
 
     if (loading) {
         return (
@@ -111,7 +119,7 @@ const OrderConfirmation = () => {
                 <p className='text-red-500 text-lg mb-4'>Error: {error}</p>
                 <button
                     onClick={() => window.location.reload()}
-                    className='bg-blue-500 text-black px-4 py-2 rounded-md hover:bg-blue-600'
+                    className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600'
                 >
                     Retry
                 </button>
@@ -123,7 +131,7 @@ const OrderConfirmation = () => {
         <div className='w-full min-h-screen flex flex-col'>
             <Nav />
             <div className='flex-grow flex justify-center items-start p-4'>
-                <div className='w-full max-w-4xl border border-neutral-300 rounded-md flex flex-col p-6 bg-black shadow-md'>
+                <div className='w-full max-w-4xl border border-neutral-300 rounded-md flex flex-col p-6 bg-white shadow-md'>
                     <h2 className='text-2xl font-semibold mb-6 text-center'>Order Confirmation</h2>
 
                     {/* Selected Address */}
@@ -189,7 +197,7 @@ const OrderConfirmation = () => {
                     <div className='flex justify-center'>
                         <button
                             onClick={handlePlaceOrder}
-                            className='bg-green-500 text-black px-6 py-3 rounded-md hover:bg-green-600 transition-colors'
+                            className='bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600 transition-colors'
                         >
                             Place Order
                         </button>
