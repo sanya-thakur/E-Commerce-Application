@@ -608,3 +608,43 @@ By the end of this milestone, you will:
 - **Order Confirmation Email**: Send users a confirmation email after placing an order.  
 
 ---
+
+
+## Milestone 25: Placing Orders in MongoDB  
+
+### Learning Goals 🎯  
+By the end of this milestone, you will:  
+- Create an **API endpoint** to process and store orders in MongoDB.  
+- Retrieve user details using their **email**.  
+- Store **order details** for each product using the existing **order schema**.  
+
+---
+
+### **1. Backend Updates: Order Placement Endpoint**  
+- Developed a **POST** endpoint (`/api/orders/place`) to receive:  
+  - **User email** (to fetch `_id` from the database).  
+  - **Selected delivery address**.  
+  - **List of ordered products**.  
+- Retrieved the **user’s `_id`** based on the provided email.  
+- Created **separate order entries** for each product but linked to the same address.  
+- Stored all **order details** in the `orders` collection using **Mongoose**.  
+
+---
+
+### **2. Data Flow**  
+1. **Frontend sends order details** (products, user email, selected address) to the backend.  
+2. **Backend retrieves the user's `_id`** from MongoDB using their email.  
+3. **Each product is stored as a separate order** in the `orders` collection.  
+4. The order includes:  
+   - **Product details** (name, image, price, etc.).  
+   - **User information** (retrieved via `_id`).  
+   - **Selected delivery address**.  
+
+---
+
+### **3. Future Enhancements & Experimentation**  
+- **Order Status Tracking**: Add a status field (Pending, Shipped, Delivered).  
+- **Payment Integration**: Store payment details and transaction IDs.  
+- **Admin Panel**: Allow admins to view and manage all orders.  
+
+---
