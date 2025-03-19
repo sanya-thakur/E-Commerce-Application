@@ -685,3 +685,43 @@ By the end of this milestone, you will:
 - **Order Cancellation**: Add functionality to cancel an order if it's not yet shipped.  
 
 ---
+
+## Milestone 27: Displaying User Orders  
+
+### Learning Goals 🎯  
+By the end of this milestone, you will:  
+- Create a **frontend page** to display all user orders.  
+- Fetch **order data** from the backend using the `/api/orders/:email` endpoint.  
+- Display **order details**, including product info, order status, and delivery address.  
+
+---
+
+### **1. Frontend Updates: My Orders Page**  
+- Created a **My Orders** page (`MyOrders.jsx`) to display user orders.  
+- Implemented a **GET request** to fetch orders from the backend.  
+- Sent the **user's email** in the request to retrieve their specific orders.  
+- Managed orders using **React state (`useState`) and effects (`useEffect`)**.  
+
+---
+
+### **2. Displaying User Orders**  
+- Rendered **order details dynamically**, including:  
+  - **Product Name & Image**  
+  - **Price & Quantity**  
+  - **Order Status** (Pending, Shipped, Delivered)  
+  - **Selected Delivery Address**  
+
+---
+
+### **3. Navigation & UI Improvements**  
+- Added **My Orders** link to the **Navbar** for easy navigation.  
+- Ensured **responsive design** for a seamless user experience.  
+
+---
+
+### **4. Future Enhancements & Experimentation**  
+- **Order Tracking:** Implement real-time order status updates.  
+- **Order History:** Allow users to filter orders based on date/status.  
+- **Order Details Page:** Add a detailed order view with invoice download.  
+
+---
