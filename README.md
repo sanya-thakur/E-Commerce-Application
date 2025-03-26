@@ -752,3 +752,36 @@ By the end of this milestone, you will:
 - Implemented **real-time UI updates** after cancellation.  
 
 ---
+
+## Milestone 29: Integrating PayPal for Online Payments  
+
+### Learning Goals 🎯  
+By the end of this milestone, you will:  
+- Learn how to **use the PayPal API**.  
+- Understand how to **integrate online payments** into the application.  
+
+---
+
+### **1. Setting Up PayPal Developer Account**  
+- **Create a PayPal Developer Account** at [PayPal Developer Dashboard](https://developer.paypal.com/).  
+- Navigate to the **Sandbox Accounts** section.  
+- Copy the **UserID** of the sandbox account and save it.  
+- Locate and copy the **Client ID** from the sandbox accounts and save it for later use.  
+
+---
+
+### **2. Frontend Updates: Adding Payment Options**  
+- Updated the **Order Confirmation Page (`OrderConfirmation.jsx`)**.  
+- Added **two payment options** using radio buttons:  
+  - **Cash on Delivery (COD)**  
+  - **Online Payment (PayPal)**  
+- When selecting **Online Payment**, the PayPal buttons should be displayed dynamically.  
+
+---
+
+### **3. Future Enhancements & Next Steps**  
+- In the next milestone, we will write the code to **display and use PayPal payment buttons**.  
+- Implement **secure backend handling** for online payments.  
+- Ensure a **smooth user experience** by handling payment success and failure cases.  
+
+---
