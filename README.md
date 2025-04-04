@@ -805,3 +805,28 @@ In this milestone, we successfully integrated **PayPal online payments** into ou
 
 ### 2️⃣ Installed PayPal SDK in React  
 To integrate PayPal, we installed the required npm package:  
+
+# 🌟 Milestone 31: Implementing Global State Management with Redux
+
+Welcome to Milestone 31! In this milestone, we learned how to implement **global state management** using **Redux**. This helps us manage data like user email across the entire app without the need for prop drilling.
+
+---
+
+## 🎯 Learning Goals
+By the end of this milestone, we understood:
+
+- How to use **Redux** for managing global application state.
+- How to configure and use a **Redux store** in a React app.
+- How to create and use **actions** and **reducers**.
+- How to share global data (like user email) across multiple components.
+
+---
+
+## 🧰 Steps We Followed
+
+### 1️⃣ Installed Redux and React-Redux
+
+We installed the necessary Redux packages:
+
+```bash
+npm install redux react-redux
