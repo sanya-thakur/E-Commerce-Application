@@ -785,3 +785,23 @@ By the end of this milestone, you will:
 - Ensure a **smooth user experience** by handling payment success and failure cases.  
 
 ---
+
+# Milestone 30: Implementing PayPal Online Payment Integration  
+
+## 🎯 What We Did  
+
+In this milestone, we successfully integrated **PayPal online payments** into our application. This allows users to choose between **Cash on Delivery (COD) and PayPal** for order payments. Below is a step-by-step breakdown of the tasks we completed.  
+
+---
+
+## 🛠️ Steps We Followed  
+
+### 1️⃣ Created a PayPal Developer Account  
+- We registered on the **[PayPal Developer Dashboard](https://developer.paypal.com/)**.  
+- We navigated to the **Sandbox Accounts** section and generated a test account.  
+- From this test account, we copied the **Client ID** needed for integration.  
+
+---
+
+### 2️⃣ Installed PayPal SDK in React  
+To integrate PayPal, we installed the required npm package:  
