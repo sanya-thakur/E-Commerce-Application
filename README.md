@@ -830,3 +830,35 @@ We installed the necessary Redux packages:
 
 ```bash
 npm install redux react-redux
+
+# 🌟 Milestone 32: Using Redux to Store and Access Email Globally
+
+Hey Kalvians! Welcome to Milestone 32!  
+Today, we expanded on our Redux setup by **storing the user email** in the global state during login and **accessing** it in all other pages using Redux hooks.
+
+---
+
+## 🎯 Learning Goals
+
+By the end of this milestone, we learned:
+
+- How to **dispatch** actions to update the Redux store.
+- How to **access** global state using `useSelector`.
+- How Redux simplifies global data sharing across components.
+
+---
+
+## 🧰 Steps We Followed
+
+### 1️⃣ Stored User Email in Global State (Login Page)
+
+In the Login page, once the user successfully logs in, we used the `useDispatch` hook to store the email in Redux.
+
+```js
+import { useDispatch } from "react-redux";
+import { setEmail } from "../store/userActions";
+
+const dispatch = useDispatch();
+
+// Example usage after successful login
+dispatch(setEmail(userEmail));
