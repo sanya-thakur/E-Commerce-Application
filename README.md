@@ -832,8 +832,7 @@ We installed the necessary Redux packages:
 npm install redux react-redux
 
 # 🌟 Milestone 32: Using Redux to Store and Access Email Globally
-
-Hey Kalvians! Welcome to Milestone 32!  
+ 
 Today, we expanded on our Redux setup by **storing the user email** in the global state during login and **accessing** it in all other pages using Redux hooks.
 
 ---
@@ -862,3 +861,20 @@ const dispatch = useDispatch();
 
 // Example usage after successful login
 dispatch(setEmail(userEmail));
+
+# 🌟 Milestone 33: Storing JWT Tokens in Cookies
+
+Welcome to Milestone 33!  
+In this milestone, we learned how to **create JWT tokens** and **store them inside cookies** for persistent authentication.
+
+---
+
+## 🎯 Learning Goals
+
+By the end of this milestone, you will:
+
+- Understand how to generate JWT tokens using `jsonwebtoken`.
+- Learn how to store JWT tokens inside cookies for secure user sessions.
+- Control token expiration using `maxAge`.
+
+---
